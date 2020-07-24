@@ -1,0 +1,14 @@
+#!/bin/bash
+cd "~/projects/$1"
+tmux new-session
+tmux rename-window 'web' 
+tmux split-window -p 25 -h 
+echo ku?
+sleep 1
+echo ku prap?
+#tmux select-pane -R
+#cd "~/projects/$1"
+#npm run watch
+tmux split-window -l 15 -v
+echo kjo ktu 
+tmux select-pane -L

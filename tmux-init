@@ -1,0 +1,6 @@
+# always open tmux if not open
+if [ "$TERM" != "screen" ] && [ ! -n "$TMUX" ]; then
+	tmux
+else
+	tmux set status-interval 1
+fi
