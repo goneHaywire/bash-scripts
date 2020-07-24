@@ -2,13 +2,9 @@
 cd "~/projects/$1"
 tmux new-session
 tmux rename-window 'web' 
-tmux split-window -p 25 -h 
-echo ku?
-sleep 1
-echo ku prap?
+tmux split-window -p 25 -h 'cd "/projects/$1/"; npm run watch'
 #tmux select-pane -R
 #cd "~/projects/$1"
 #npm run watch
-tmux split-window -l 15 -v
-echo kjo ktu 
+tmux split-window -l 15 -v 'cd "/projects/$1/"; php artisan serve'
 tmux select-pane -L
