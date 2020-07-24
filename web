@@ -1,0 +1,6 @@
+#!/bin/bash
+cd "~/projects/$1"
+tmux rename-window 'web' 
+tmux split-window -p 30 -h "cd ~/projects/$1; npm run watch"
+tmux split-window -l 17 -v "cd ~/projects/$1/; php artisan serve"
+tmux select-pane -L
